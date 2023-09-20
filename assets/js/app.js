@@ -11,6 +11,7 @@ createApp({
     data() {
         return {
 
+            // ARRAY DELLE EMAIL GENERATE
             rndEmails: [],
 
         }
@@ -23,9 +24,9 @@ createApp({
             //API PER GENERARE INDIRIZZI EMAIL RANDOMICI
             axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
 
+                //GET RANDOM EMAIL DALL'API .then .push() IN rndEmails
                 .then(response => {
                     this.rndEmails.push(response.data.response);
-                    console.log(this.rndEmails);
                 });
 
         }
