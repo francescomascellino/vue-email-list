@@ -31,9 +31,7 @@
 
                     <div class="col-6">
 
-                        <!-- SE LA LISTA NON E' VISUALIZZATA MOSTRA UN BACKGROUND ANIMATO -->
-                        <div class="card"
-                            :class="rndEmails.length < 10 ? 'shine' : '' ">
+                        <div class="card">
 
                             <!-- LA LISTA VIENE VISUALIZZATA SOLO SE L'ARRAY E' PIENO -->
                             <ul class="list-group list-group-flush"
@@ -48,6 +46,19 @@
                                 </li>
                             </ul>
 
+                            <!-- SE LA LISTA NON E' VISUALIZZATA MOSTRA UN BACKGROUND ANIMATO -->
+                            <ul class="list-group list-group-flush" v-else>
+
+                                <li class="list-group-item shine"
+                                    v-for="i in 10"
+                                    :key="i"
+                                    style="padding: 8px, 16px; line-height: 24px;">
+                                    <span class="shine"></span>
+                                </li>
+
+                            </ul>
+
+                            <!-- LOADER ALTERNATIVO: SPINNER -->
                             <!-- SE LA LISTA NON E' VISUALIZZATA MOSTRA LO SPINNER -->
                             <!-- <div v-else class="my-5 align-self-center loader">
 
