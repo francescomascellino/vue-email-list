@@ -22,6 +22,7 @@ createApp({
 
     mounted() {
 
+        //SOSTITUENDO IL 10 IN app.js e in index.html CON UNA VARIABILE DEFINITA DALL'UTENTE SARA' POSSIBILE GENERARE UN NUMERO PERSONALIZZATO DI EMAIL
         for (let i = 0; i < 10; i++) {
 
             //API PER GENERARE INDIRIZZI EMAIL RANDOMICI
