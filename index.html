@@ -23,9 +23,14 @@
 
         <div id="app">
 
-            <ul v-for="(email, index) in rndEmails" :key="index">
-                <li>{{index +1}} {{email}}</li>
-            </ul>
+            <div class="emailContainer"
+                v-if="rndEmails.length == 10">
+
+                <ul v-for="(email, index) in rndEmails" :key="index">
+                    <li>{{index +1}} {{email}}</li>
+                </ul>
+
+            </div>
 
         </div>
 
