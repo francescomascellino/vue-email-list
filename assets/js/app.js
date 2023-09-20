@@ -25,7 +25,6 @@ createApp({
         for (let i = 0; i < 10; i++) {
 
             //API PER GENERARE INDIRIZZI EMAIL RANDOMICI
-            //PRIMA DI PROCEDERE ASPETTA CHE TUTTE LE CHIAMATE DI azios VENGANO COMPIUTE
             axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
 
                 //GET RANDOM EMAIL DALL'API .then .push() IN rndEmails
@@ -37,11 +36,12 @@ createApp({
 
     },
 
-    //ALTERNATIVA CON LIFEHOOL ASINCRONO
+    //ALTERNATIVA CON LIFEHOOK ASINCRONO
 
-    // async mounted() è una sintassi che indica che il metodo mounted() è una funzione asincrona. Le funzioni asincrone in JavaScript consentono di scrivere codice che può attendere il completamento di operazioni asincrone, come richieste HTTP o operazioni di I/O, senza bloccare l'esecuzione del thread principale.
+    /* async mounted() è una sintassi che indica che il metodo mounted() è una funzione asincrona. Le funzioni asincrone in JavaScript consentono di scrivere codice che può attendere il completamento di operazioni asincrone, come richieste HTTP o operazioni di I/O, senza bloccare l'esecuzione del thread principale. */
 
-    // Utilizzo: Quando si definisce async mounted(), è possibile utilizzare l'operatore await all'interno del metodo per attendere il completamento di una promessa o di un'altra funzione asincrona prima di eseguire il resto del codice nel metodo mounted(). Ciò può essere utile quando si effettuano chiamate API o si eseguono operazioni asincrone per ottenere dati da utilizzare nel componente.
+    /* Utilizzo: Quando si definisce async mounted(), è possibile utilizzare l'operatore await all'interno del metodo per attendere il completamento di una promessa o di un'altra funzione asincrona prima di eseguire il resto del codice nel metodo mounted(). Ciò può essere utile quando si effettuano chiamate API o si eseguono operazioni asincrone per ottenere dati da utilizzare nel componente. */
+
     /*     async mounted() {
     
             for (let i = 0; i < 10; i++) {

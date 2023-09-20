@@ -1,4 +1,4 @@
-/* SPINNER */
+/*#region SPINNER */
 
 .loader {
     border: 16px solid #f3f3f3;
@@ -18,3 +18,26 @@
         transform: rotate(360deg);
     }
 }
+
+/*#endregion SPINNER */
+
+/*#region SHINE */
+
+.card {
+    min-height: 411px;
+}
+
+.shine {
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1s shine linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
+}
+
+/*#endregion SHINE */
